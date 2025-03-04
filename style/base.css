@@ -5,6 +5,61 @@ body {
     background-color: #f8f8f8;
 }
 
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.oswald-custom {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 header {
     background-color: #1f2c41;
     color: white;
@@ -50,7 +105,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    max-width: 1200px; 
+    max-width: 1200px;
     width: 90%;
     margin: auto;
 }
@@ -65,7 +120,7 @@ section {
 
 .about, .resources {
     width: 45%;
-    min-width: 300px; 
+    min-width: 300px;
 }
 
 .location {
@@ -154,7 +209,7 @@ footer {
 
 @media (max-width: 768px) {
     .about, .resources {
-        width: 100%;  
+        width: 100%;
     }
 
     .about-content {
