@@ -3,7 +3,7 @@ const button = document.querySelector('button');
 const list = document.querySelector('#chapterList');
 
 button.addEventListener('click', () => {
-    const chapter = input.value.trim();
+    const chapter = input.value.trim(); 
 
     if (chapter !== '') {
         const li = document.createElement('li');
@@ -22,6 +22,10 @@ button.addEventListener('click', () => {
 
         deleteButton.addEventListener('click', () => {
             list.removeChild(li);
+            input.focus();
         });
+    } else {
+        alert('Please enter a chapter name before adding.');
+        input.focus();
     }
-})
+});
