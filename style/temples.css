@@ -39,18 +39,18 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--link-color);
-    padding: var(--padding) 20px;
+    background-color: #333;
+    color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    padding: 10px 20px;
 }
 
 header h1 {
     margin: 0;
     font-size: 1.5rem;
+    padding-right: 20px;
 }
 
 nav {
@@ -62,7 +62,7 @@ nav {
     font-size: 30px;
     background: none;
     border: none;
-    color: var(--link-color);
+    color: white;
     margin-right: 20px;
 }
 
@@ -78,14 +78,14 @@ nav {
 }
 
 .nav-links a {
-    color: var(--link-color);
+    color: white;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--highlight-color);
+    color: #f8f8f8;
 }
 
 .temple-gallery img {
