@@ -1,69 +1,48 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #f8f8f8;
+    --link-color: white;
+    --highlight-color: #e1e1e1;
+    --padding: 10px;
+}
+
 body {
     font-family: "Ubuntu", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: var(--secondary-color);
 }
 
 .ubuntu-light {
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
-    font-style: normal;
 }
 
 .ubuntu-regular {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 
 .ubuntu-medium {
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
-    font-style: normal;
 }
 
 .ubuntu-bold {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
-    font-style: normal;
-}
-
-.ubuntu-light-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.ubuntu-regular-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.ubuntu-medium-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.ubuntu-bold-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: italic;
 }
 
 .oswald-custom {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--link-color);
     text-align: center;
-    padding: 10px 0;
+    padding: var(--padding) 0;
 }
 
 nav {
@@ -79,25 +58,30 @@ nav {
 
 .nav-links li {
     display: inline-block;
-    padding: 10px;
+    padding: var(--padding);
 }
 
 .nav-links a {
-    color: white;
+    color: var(--link-color);
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
 }
 
 .hamburger {
     font-size: 30px;
     background: none;
     border: none;
-    color: white;
+    color: var(--link-color);
 }
 
 .temple-gallery img {
     width: 100%;
     max-width: 100%;
-    height: auto;    
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -109,10 +93,23 @@ nav {
     padding: 20px;
 }
 
-
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--link-color);
     text-align: center;
-    padding: 10px 0;
+    padding: var(--padding) 0;
+}
+
+@media (min-width: 600px) {
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
