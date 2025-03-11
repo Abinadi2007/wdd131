@@ -41,34 +41,21 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--link-color);
-    text-align: center;
-    padding: var(--padding) 0;
+    padding: var(--padding) 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.nav-links {
-    display: none;
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    padding: var(--padding);
-}
-
-.nav-links a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--highlight-color);
 }
 
 .hamburger {
@@ -76,6 +63,29 @@ nav {
     background: none;
     border: none;
     color: var(--link-color);
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
 }
 
 .temple-gallery img {
