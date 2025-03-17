@@ -48,3 +48,39 @@ footer {
     color: white;
     padding: 10px;
 }
+
+a:link,
+a:visited {
+    color: navy;
+}
+
+a:hover {
+    color: purple;
+}
+
+:root {
+    --bord: 1px solid #777;
+}
+
+.datatable {
+    border: var(--bord);
+}
+
+.col {
+    border-right: var(--bord);
+}
+
+.col:not(:last-child) {
+    border-right: var(--bord);
+}
+
+.row:last-child {
+    background-color: #666;
+    color: white;
+}
+
+ol li::marker {
+    content: "✔";
+    color: navy;
+    font-size: 2rem;
+}
