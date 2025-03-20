@@ -89,25 +89,19 @@ header {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
-    padding: 20px;
-    align-items: start;
-    flex-grow: 1;
 }
 
-.data-box, .weather-container, .hero {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.data-box, .hero, .weather-container {
+    flex: 1;
 }
 
 .hero img {
-    width: 100%;
+    max-width: 100%; 
     height: auto;
-    border-radius: 8px;
 }
 
 .weather-icon {
