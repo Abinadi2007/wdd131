@@ -11,6 +11,10 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 .ubuntu-light {
@@ -86,13 +90,14 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
-    align-items: center;
+    align-items: start;
+    flex-grow: 1;
 }
 
-.data-box {
+.data-box, .weather-container, .hero {
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -103,13 +108,6 @@ header {
     width: 100%;
     height: auto;
     border-radius: 8px;
-}
-
-.weather-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .weather-icon {
@@ -125,11 +123,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
     header {
         font-size: 1.2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
     }
 }
