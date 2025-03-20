@@ -8,13 +8,7 @@ body {
     font-family: "Ubuntu", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    background-color: #f8f8f8;
 }
 
 .ubuntu-light {
@@ -71,15 +65,6 @@ body {
     font-style: normal;
 }
 
-h1::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: white;
-    margin: 5px auto;
-}
-
 header {
     background: var(--primary-color);
     color: white;
@@ -88,34 +73,44 @@ header {
     font-size: 1.5rem;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+.background-hero {
+    position: relative;
+    background: url('images/Honduras.webp') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.data-box, .weather-container, .hero {
-    background: white;
+.picture img {
+    display: none;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.data-box, .weather-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.weather-icon {
-    font-size: 2rem;
+    flex: 1 1 300px;
+    text-align: center;
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: auto;
     padding: 10px;
     background: var(--primary-color);
     color: white;
@@ -123,15 +118,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    header {
-        font-size: 1.2rem;
-    }
-
     .container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 20px;
     }
 
-    .hero, .weather-container, .data-box {
-        padding: 15px;
+    .data-box, .weather-container {
+        margin: 10px 0;
     }
 }
