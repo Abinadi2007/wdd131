@@ -93,8 +93,8 @@ header {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
-    align-items: start; /* Asegura que los elementos se alineen hacia el principio */
-    flex-grow: 1; /* Esto asegura que la sección de datos ocupe todo el espacio disponible */
+    align-items: start;
+    flex-grow: 1;
 }
 
 .data-box, .weather-container, .hero {
