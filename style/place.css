@@ -90,7 +90,7 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     align-items: start;
@@ -109,6 +109,7 @@ header {
     height: auto;
     border-radius: 8px;
 }
+
 
 .weather-icon {
     font-size: 2rem;
