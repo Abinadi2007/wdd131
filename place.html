@@ -32,21 +32,25 @@
                 <p>Internet TLD: .hn</p>
                 <p>Time Zone: GMT -6</p>
             </div>
+        </div>    
         
             <div class="hero">
-                <img src="images/Honduras.webp" alt="Large Image">
+                <img src="images/Honduras.webp" 
+                srcset="images/Honduras_small.webp 480w, images/Honduras_medium.webp 768w, images/Honduras_large.webp 1200w"
+                sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1200px"
+                alt="Scenic view of Honduras">
             </div>
         
             <div class="weather-container">
-                <p class="weather-icon"><img src="images/315693_sun_cloud_rain_icon.svg"></p>
+                <p class="weather-icon"><img src="images/315693_sun_cloud_rain_icon.svg" alt="Weather Icon"></p>
                 <div id="weather-container" class="weather-container">
                     <h2>Weather</h2>
                     <p>Loading weather data...</p>
                 </div>
             </div>
 
-        <script src="weather.js"></script>
     </main>
+        <script src="weather.js"></script>
     <footer>
         <p>© <span id="currentyear"></span> 🦜 Joseph Abinadi Jimenez 🦜 Honduras</p>
         <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
