@@ -110,7 +110,6 @@ header {
     border-radius: 8px;
 }
 
-
 .weather-icon {
     font-size: 2rem;
 }
@@ -130,5 +129,9 @@ footer {
 
     .container {
         grid-template-columns: 1fr;
+    }
+
+    .hero, .weather-container, .data-box {
+        padding: 15px;
     }
 }
