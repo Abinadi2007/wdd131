@@ -89,19 +89,25 @@ header {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
+    padding: 20px;
+    align-items: start; /* Asegura que los elementos se alineen hacia el principio */
+    flex-grow: 1; /* Esto asegura que la sección de datos ocupe todo el espacio disponible */
 }
 
-.data-box, .hero, .weather-container {
-    flex: 1;
+.data-box, .weather-container, .hero {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero img {
-    max-width: 100%; 
+    width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .weather-icon {
