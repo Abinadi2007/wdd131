@@ -1,0 +1,13 @@
+@media (min-width: 600px) {
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

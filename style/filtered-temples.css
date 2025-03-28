@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #f8f8f8;
+    --link-color: white;
+    --highlight-color: #e1e1e1;
+    --padding: 10px;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.oswald-custom {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding-right: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f8f8f8;
+}
+
+.temple-gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.temple-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--link-color);
+    text-align: center;
+    padding: var(--padding) 0;
+}
+
+@media (min-width: 600px) {
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
