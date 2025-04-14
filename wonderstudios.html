@@ -1,54 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wonder Studios</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wonder Studios WDD 131 Final Proyect</title>
 
-    <link rel="icon" href="wonder.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/wonderstudios.css">
+  <link rel="icon" href="wonder.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/wonderstudios.css" />
+
+  <script src="scripts/wonderweather.js" defer></script>
+  <script src="scripts/wonderupdate.js" defer></script>
+  <script src="scripts/wondernews.js" defer></script>
+  <script src="scripts/characterquotes.js" defer></script>
+  <script src="scripts/wondertheme.js" defer></script>
+  <script src="scripts/login.js" defer></script>
+  <script src="scripts/register.js" defer></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+        'google_translate_element'
+      );
+    }
+  </script>
+  
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  
 </head>
 <body>
-    <header class="hero" style="background-image: url('images/hero-image.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
-        <div class="hero-content">
-            <h1>Wonder Studios Xatrucs</h1>
-        </div>
-            
-    <section id="info-box" class="info-section">
-        <p>Wonder Studios: Great Things Ahead</p>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#santa-monika">Santa Monika</a></li>
-                <li><a href="#twin-sisters">The Twin Sisters</a></li>
-                <li><a href="#venenosa">Venenosa</a></li>
-            </ul>
-        </nav>
+  <header>
+    <div class="top-bar" role="banner">
+      <div class="container top-bar__content">
+        <span id="weather-text" aria-live="polite">Cargando clima... </span>
+
+        <strong class="logo">- WONDER STUDIOS WEATHER FORECAST</strong>
+      </div>
+    </div>
+
+    <nav class="nav-bar" role="navigation">
+      <div class="container nav-bar__content">
+        <a href="gallery.html" class="nav-button">Galería</a>
+        <a href="login.html" class="nav-button">Iniciar sesión</a>
+      </div>
+      <div id="google_translate_element" class="translate-widget"></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Imagen principal de Wonder Studios">
+      <img src="images/hero-image.jpg" alt="Imagen de héroe de Wonder Studios" class="hero-image" />
     </section>
 
-    </header>
-   
-    <main>
-        <section id="stories" class="story-section">
-            <article class="story" id="santa-monika">
-                <h3>Santa Monika</h3>
-                <p>Discover the history of the city of Santa Monika</p>
-            </article>
-            <article class="story" id="twin-sisters">
-                <h3>The Twin Sisters</h3>
-                <p>Did you miss them?</p>
-            </article>
-            <article class="story" id="venenosa">
-                <h3>Venenosa</h3>
-                <p>Even the bravest fear her!</p>
-            </article>
-        </section>
-    </main>
+    <section class="section info-cards" id="info">
+      <div class="container">
+        <h2>Frases de Personajes</h2>
+        <div id="character-quote-card" class="character-quote-card"></div>
 
-    <footer class="footer">
-        <p>&copy; 2025 Wonder Studios. Todos los derechos reservados. <a href="references.html">Referencias</a></p>
-    </footer>
+        <article class="card">
+          <h2>Wonder News</h2>
+          <p id="wonder-news-text">Cargando noticias...</p>
+        </article>
+
+        <article class="card">
+          <h2>Actualización Semanal</h2>
+          <p id="weekly-update-text">Cargando...</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery">
+      <div class="container grid-4">
+        <div class="card">
+          <img src="images/referenceimage1.jpg" alt="Imagen referencial 1" />
+          <p>Información sobre la imagen 1</p>
+        </div>
+        <div class="card">
+          <p>Texto relacionado con el contenido del sitio o galería.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Imagen referencial 2" />
+          <p>Información sobre la imagen 2</p>
+        </div>
+        <div class="card">
+          <p>Detalles o curiosidades sobre la galería o noticias.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <h2>Equipo de Wonder Studios</h2>
+          <p>Conoce al equipo detrás de las maravillas visuales.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Wonder Studios. Todos los derechos reservados.</p>
+      
+    </div>
+  </footer>
 </body>
 </html>
